@@ -80,3 +80,5 @@
     // }
   }
 })();
+
+let aaa = document.body.clientWidth;
