@@ -1,4 +1,4 @@
-.hero {
+.section--hero {
   // position: relative;
   // display: flex;
 }
@@ -36,19 +36,13 @@
 
   @media screen and (min-width: 768px) {
     font-size: 55px;
-    // margin-top: 40px;
+
     text-align: left;
   }
 
   @media screen and (min-width: 1200px) {
-    // margin-top: 64px;
     font-size: 60px;
   }
-  // margin-bottom: 73px;
-
-  // font-size: 60px;
-
-  // width: 530px;
 }
 
 .hero__name {
@@ -69,9 +63,6 @@
   @media screen and (min-width: 1200px) {
     font-size: 40px;
   }
-  // line-height: 1.7;
-  //
-  // font-size: 40px;
 }
 
 .hero__border {
@@ -119,18 +110,6 @@
   @media screen and (min-width: 1200px) {
     width: 470px;
   }
-  // position: relative;
-  //
-  //
-
-  //   position: absolute;
-  // top: 0;
-  // right: 50px;
-  // width: 640px;
-  // height: 520px;
-  // border: 10px solid $accent-color;
-  // padding-top: 30px;
-  // padding-bottom: 30px;
 }
 
 .hero__img {
