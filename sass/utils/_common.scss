@@ -30,3 +30,40 @@
     font-size: 40px;
   }
 }
+
+.button {
+  height: 145px;
+  width: 100%;
+  padding: 10px;
+  border: 4px solid $accent-light-color;
+  color: inherit;
+  outline: none;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(55, 63, 77, 0.8),
+      rgba(55, 63, 77, 0.8)
+    ),
+    url('../images/backgrounds/fon-btns.jpg');
+  background-color: $grey-color;
+  // background-size: cover;
+
+  transition: opacity $transition-fast, color $transition-fast;
+  // transition: color $transition-fast;
+
+  @media screen and (min-width: 768px) {
+    height: 155px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+    background-image: linear-gradient(
+        to right,
+        rgba(55, 63, 77, 0.9),
+        rgba(55, 63, 77, 0.9)
+      ),
+      url('../images/backgrounds/fon-btns.jpg');
+  }
+}

@@ -52,6 +52,10 @@
   &:nth-child(1) {
     margin-right: auto;
     margin-bottom: 25px;
+
+    & .button {
+      background-position: left top;
+    }
   }
 
   &:nth-child(2) {
@@ -59,19 +63,27 @@
     margin-right: auto;
     margin-bottom: 25px;
 
+    & .button {
+      background-position: 50% 50%;
+    }
+
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      top: 185px;
+      top: 180px;
       transform: translateX(calc(50vw - 170px - 15px));
     }
 
     @media screen and (min-width: 1200px) {
-      top: 185px;
+      top: 180px;
       transform: translateX(395px);
     }
   }
 
   &:nth-child(3) {
     margin-left: auto;
+
+    & .button {
+      background-position: right bottom;
+    }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       top: 360px;
@@ -85,56 +97,12 @@
   }
 }
 
-.service__button {
-  height: 145px;
-  width: 100%;
-  padding: 10px;
-  border: 4px solid #f17d11;
-  color: inherit;
-  outline: none;
-
-  background-image: linear-gradient(
-      to right,
-      rgba(55, 63, 77, 0.8),
-      rgba(55, 63, 77, 0.8)
-    ),
-    url('../images/backgrounds/fon-btns.jpg');
-  background-color: $grey-color;
-  background-size: cover;
-
-  transition: opacity $transition-fast;
-
-  @media screen and (min-width: 768px) {
-    height: 155px;
-  }
-
-  &:hover .service__subject,
-  &:hover .service__classes,
-  &:focus .service__subject,
-  &:focus .service__classes {
-    color: $accent-color;
-  }
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    background-image: linear-gradient(
-        to right,
-        rgba(55, 63, 77, 0.9),
-        rgba(55, 63, 77, 0.9)
-      ),
-      url('../images/backgrounds/fon-btns.jpg');
-  }
-}
-
 .service__subject {
   font-size: 25px;
   line-height: 1.5;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: inherit;
-
-  transition: color $transition-fast;
 
   @media screen and (min-width: 768px) {
     font-size: 30px;
@@ -146,8 +114,6 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   color: inherit;
-
-  transition: color $transition-fast;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -193,7 +159,7 @@
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 4px solid #f17d11;
+  border: 4px solid $accent-light-color;
 
   transition: opacity $transition-slow;
 

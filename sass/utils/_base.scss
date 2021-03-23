@@ -9,10 +9,9 @@ body {
   // line-height: 1.72;
 }
 
-// body.modal--is-open,
-// body.menu--is-open {
-//   overflow: hidden;
-// }
+body.modal--is-open {
+  overflow: hidden;
+}
 
 h1,
 h2,

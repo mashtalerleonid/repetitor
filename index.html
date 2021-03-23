@@ -100,6 +100,12 @@
               </span>
             </li>
           </ul>
+          <button class="button button--video" type="button" data-modal-open>
+            <svg class="video__icon" width="45" height="45">
+              <use href="./images/icons/sprite.svg#play"></use>
+            </svg>
+            <h3 class="video__text">Переглянути фрагменти занять</h3>
+          </button>
         </div>
       </section>
 
@@ -110,19 +116,31 @@
           <div class="service-description__container">
             <ul class="service__list" data-list>
               <li class="service__item">
-                <button class="service__button" type="button" data-dpa-btn>
+                <button
+                  class="button button--service"
+                  type="button"
+                  data-dpa-btn
+                >
                   <h3 class="service__subject">Підготовка до ЗНО</h3>
-                  <h4 class="service__classes">11 клас</h4>
+                  <h4 class="service__classes">10-11 класи</h4>
                 </button>
               </li>
               <li class="service__item">
-                <button class="service__button" type="button" data-zno-btn>
+                <button
+                  class="button button--service"
+                  type="button"
+                  data-zno-btn
+                >
                   <h3 class="service__subject">Підготовка до ДПА</h3>
                   <h4 class="service__classes">9 клас</h4>
                 </button>
               </li>
               <li class="service__item">
-                <button class="service__button" type="button" data-simple-btn>
+                <button
+                  class="button button--service"
+                  type="button"
+                  data-simple-btn
+                >
                   <h3 class="service__subject">Додаткові заняття</h3>
                   <h4 class="service__classes">7-8 класи</h4>
                 </button>
@@ -253,6 +271,24 @@
       </section>
     </main>
     <footer></footer>
+
+    <!-- modals -->
+    <div class="backdrop backdrop--is-hidden" data-backdrop>
+      <div class="modal">
+        <button class="modal__close-btn" type="button" data-modal-close>
+          <svg class="modal__close-icon" width="12" height="12">
+            <use href="./images/icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <video
+          class="record__video"
+          src="./video/video.mp4"
+          data-video
+          controls
+        ></video>
+      </div>
+    </div>
     <script src="./js/service.js"></script>
+    <script src="./js/modal-video.js"></script>
   </body>
 </html>
