@@ -17,8 +17,7 @@
   width: 90%;
 }
 
-.section__title--rules,
-.section__title--response {
+.section__title--rules {
   position: relative;
 
   &::after {
@@ -36,9 +35,10 @@
   @media screen and (min-width: 768px) {
     &::before {
       content: '';
+      display: block;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -15px;
       margin-right: auto;
       width: 200px;
       height: 3px;
@@ -46,10 +46,9 @@
     }
 
     &::after {
-      content: '';
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -15px;
       margin-left: auto;
       width: 200px;
       height: 3px;
@@ -57,7 +56,14 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1000px) {
+    &::after {
+      bottom: 0;
+    }
+
+    &::before {
+      bottom: 0;
+    }
   }
 }
 

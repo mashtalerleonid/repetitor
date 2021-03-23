@@ -1,7 +1,7 @@
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
 
-  loop: true,
+  // loop: true,
   speed: 500,
   effect: 'cube',
   // If we need pagination

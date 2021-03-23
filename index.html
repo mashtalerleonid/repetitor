@@ -192,7 +192,7 @@
                     Вартість заняття 800 грн/міс.
                   </li>
                   <li class="description__item">Група від 6 до 10 чоловік.</li>
-                  <li class="description__item">Заняття 2 рази на тиждень.</li>
+                  <li class="description__item">Заняття 3 рази на тиждень.</li>
                   <li class="description__item">
                     Групи для батьків і учнів в Telegram
                   </li>
@@ -222,7 +222,7 @@
                 <h4 class="description__title">Заняття у групі</h4>
                 <ul class="description__list">
                   <li class="description__item">
-                    Вартість заняття 800 грн/міс.
+                    Вартість заняття 600 грн/міс.
                   </li>
                   <li class="description__item">Група від 6 до 10 чоловік.</li>
                   <li class="description__item">Заняття 2 рази на тиждень.</li>
@@ -247,11 +247,80 @@
                     За бажанням можна повторювати теми, які проходили в школі на
                     уроках.
                   </li>
-                  Review
                 </ul>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section section--cost" id="calculator">
+        <div class="container">
+          <h2 class="section__title section__title--cost">
+            Розрахувати вартість<br />індивідуальних занять за місяць
+          </h2>
+          <form action="" class="calc-form">
+            <div class="calc-form__field">
+              <label class="calc-form__label" for="calc-form-subjects">
+                Оберіть предмет:
+              </label>
+              <select
+                class="calc-form__select"
+                name="subjects"
+                id="calc-form-subjects"
+              >
+                <option value="ЗНО:200">Підготовка до ЗНО</option>
+                <option value="ДПА:150">Підготовка до ДПА</option>
+                <option value="Додатково:150">Додаткові заняття</option>
+              </select>
+            </div>
+
+            <div class="calc-form__field">
+              <label class="calc-form__label" for="">
+                Скільки разів на тиждень:
+              </label>
+              <div
+                class="calc-form-input-radio-container"
+                id="calculator-form-input-much"
+              >
+                <input
+                  type="radio"
+                  checked
+                  class="calculator-form-input-field"
+                  id="calculator-form-input-much-one"
+                  name="much"
+                  value="one"
+                />
+                <label
+                  for="calculator-form-input-much-one"
+                  class="calculator-form-input-label"
+                  >1 раз</label
+                >
+
+                <input
+                  type="radio"
+                  class="calculator-form-input-field"
+                  id="calculator-form-input-much-two"
+                  name="much"
+                  value="two"
+                />
+                <label
+                  for="calculator-form-input-much-two"
+                  class="calculator-form-input-label"
+                  >2 рази</label
+                >
+              </div>
+            </div>
+
+            <div class="calculator-form-input">
+              <p class="calculator-form-total">Вартість:</p>
+              <p class="calculator-form-total-cost">0 грн</p>
+            </div>
+            <div class="buttons">
+              <input type="submit" value="За місяць -" class="accent-btn" />
+              <button class="accent-btn" id="for-hour-btn">За годину -</button>
+            </div>
+          </form>
         </div>
       </section>
 
@@ -351,5 +420,6 @@
     <script src="./js/modal-video.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/sliders.js"></script>
+    <script src="./js/calculator.js"></script>
   </body>
 </html>
