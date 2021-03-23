@@ -1,0 +1,33 @@
+.section--response {
+  background-image: linear-gradient(
+      to right,
+      rgba(55, 63, 77, 0.9),
+      rgba(55, 63, 77, 0.9)
+    ),
+    url('../images/backgrounds/fon-rules.jpg');
+  background-color: $grey-color;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-container {
+  max-width: 600px;
+  max-height: 90vh;
+  background-color: $white-color;
+  padding: 10px;
+  overflow-x: scroll;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.thumb {
+  width: 300px;
+  height: 500px;
+  object-fit: contain;
+}
