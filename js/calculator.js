@@ -1,72 +1,21 @@
-const subjectsSelect = document.querySelector('#calculator-form-subjects');
+const subjectsSelect = document.querySelector('#calc-form-subjects');
 
 let k = 0;
 
-const subjectsMultiSelect = new Choices(subjectsSelect, {
-  allowSearch: false,
-  silent: false,
-  renderChoiceLimit: -1,
-  maxItemCount: -1,
-  removeItems: true,
-  removeItemButton: true,
-  editItems: false,
-  duplicateItemsAllowed: false,
-  delimiter: ',',
-  paste: true,
-  searchEnabled: false,
-  searchChoices: true,
-  searchResultLimit: -1,
-  position: 'auto',
-  resetScrollPosition: true,
-  shouldSort: true,
-  shouldSortItems: false,
-  placeholder: true,
-  noChoicesText: 'Немає доступних опцій',
-  itemSelectText: 'Натисніть для вибору',
-  classNames: {
-    containerInner: 'choices__inner tech-input-container',
-    input: 'choices__input',
-  },
-});
+const calculatorForm = document.querySelector('.calc-form');
+const button = document.querySelector('.calc-form__button');
 
-const calculatorForm = document.querySelector('.calculator-form');
-
-calculatorForm.addEventListener('submit', function (event) {
+button.addEventListener('click', function (event) {
   event.preventDefault();
   k = 0;
-  //Selectors
-  const lessonPlace = document.querySelector(
-    '#calculator-form-input-place input:checked',
-  );
   const howMuch = document.querySelector(
-    '#calculator-form-input-much input:checked',
+    '#calc-form__radio-container input:checked',
   );
-
-  //Values
-  const subjectsValue = getSubjectsSum(subjectsMultiSelect.getValue());
-  const lessonPlaceValue = convertPlaceToPrice(lessonPlace.value);
+  const subjectsValue = extractPriceFromValue(subjectsSelect.value);
   const howMuchValue = convertMuchToPrice(howMuch.value);
-  const totalSum = (subjectsValue + lessonPlaceValue * k) * howMuchValue * 4;
+  const totalSum = subjectsValue * howMuchValue * 4;
   renderSum(totalSum);
 });
-
-//const forHour = document.querySelector('#for-hour-btn1');
-//forHour.addEventListener('click', function(event) {
-//    event.preventDefault();
-//    forHour.textContent='ddd'
-//});
-
-//const requestReceivedModal = document.querySelector('#request-received');
-
-function getSubjectsSum(subjectsArr) {
-  let totalSum = 0;
-
-  subjectsArr.forEach(function (tech) {
-    totalSum = totalSum + extractPriceFromValue(tech.value);
-    k = k + 1;
-  });
-  return totalSum;
-}
 
 function extractPriceFromValue(str) {
   const price = str.match(/:\d+/);
@@ -76,33 +25,26 @@ function extractPriceFromValue(str) {
   return 0;
 }
 
-function convertPlaceToPrice(option) {
-  if (option === 'your') {
-    return 20;
-  }
-  return 0;
-}
-
 function convertMuchToPrice(option) {
   if (option === 'two') {
     return 2;
+  } else if (option === 'three') {
+    return 3;
   }
   return 1;
 }
 
 function renderSum(sum) {
-  const costElement = document.querySelector('.calculator-form-total-cost');
+  const costElement = document.querySelector('.calc-form__total');
   costElement.textContent = 'Підрахунок';
   setTimeout(function () {
     setTimeout(function () {
       setTimeout(function () {
-        setTimeout(function () {
-          costElement.textContent = sum + ' грн/міс';
-        }, 500);
-        costElement.textContent = 'Підрахунок...';
-      }, 500);
-      costElement.textContent = 'Підрахунок..';
-    }, 500);
-    costElement.textContent = 'Підрахунок.';
-  }, 500);
+        costElement.textContent = sum + ' грн/міс';
+      }, 300);
+      costElement.textContent = 'Підрахунок...';
+    }, 300);
+    costElement.textContent = 'Підрахунок..';
+  }, 300);
+  costElement.textContent = 'Підрахунок.';
 }

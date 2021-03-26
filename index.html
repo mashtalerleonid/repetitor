@@ -260,10 +260,8 @@
             Розрахувати вартість<br />індивідуальних занять за місяць
           </h2>
           <form action="" class="calc-form">
-            <div class="calc-form__field">
-              <label class="calc-form__label" for="calc-form-subjects">
-                Оберіть предмет:
-              </label>
+            <div class="calc-form__field-select">
+              <h3 class="calc-form__title">Оберіть предмет:</h3>
               <select
                 class="calc-form__select"
                 name="subjects"
@@ -275,51 +273,72 @@
               </select>
             </div>
 
-            <div class="calc-form__field">
-              <label class="calc-form__label" for="">
-                Скільки разів на тиждень:
-              </label>
-              <div
-                class="calc-form-input-radio-container"
-                id="calculator-form-input-much"
-              >
+            <!-- <div class="calc-form__field "> -->
+            <h3 class="calc-form__title" for="">Скільки разів на тиждень:</h3>
+
+            <div
+              class="calc-form__radio-container"
+              id="calc-form__radio-container"
+            >
+              <div class="calc-form__field-radio">
                 <input
                   type="radio"
                   checked
-                  class="calculator-form-input-field"
-                  id="calculator-form-input-much-one"
-                  name="much"
+                  class="calc-form__radio"
+                  id="calc-form__radio--one"
+                  name="how-much"
                   value="one"
                 />
                 <label
-                  for="calculator-form-input-much-one"
-                  class="calculator-form-input-label"
-                  >1 раз</label
+                  class="calc-form__label-radio"
+                  for="calc-form__radio--one"
                 >
+                  1 раз
+                </label>
+              </div>
 
+              <div class="calc-form__field-radio">
                 <input
                   type="radio"
-                  class="calculator-form-input-field"
-                  id="calculator-form-input-much-two"
-                  name="much"
+                  class="calc-form__radio"
+                  id="calc-form__radio--two"
+                  name="how-much"
                   value="two"
                 />
                 <label
-                  for="calculator-form-input-much-two"
-                  class="calculator-form-input-label"
-                  >2 рази</label
+                  class="calc-form__label-radio"
+                  for="calc-form__radio--two"
                 >
+                  2 рази
+                </label>
+              </div>
+
+              <div class="calc-form__field-radio">
+                <input
+                  type="radio"
+                  class="calc-form__radio"
+                  id="calc-form__radio--three"
+                  name="how-much"
+                  value="three"
+                />
+                <label
+                  class="calc-form__label-radio"
+                  for="calc-form__radio--three"
+                >
+                  3 рази
+                </label>
               </div>
             </div>
+            <!-- </div> -->
 
-            <div class="calculator-form-input">
-              <p class="calculator-form-total">Вартість:</p>
-              <p class="calculator-form-total-cost">0 грн</p>
+            <div class="calc-form__cost-container">
+              <h3 class="calc-form__title">Вартість:</h3>
+              <p class="calc-form__total">0 грн</p>
             </div>
-            <div class="buttons">
-              <input type="submit" value="За місяць -" class="accent-btn" />
-              <button class="accent-btn" id="for-hour-btn">За годину -</button>
-            </div>
+            <button class="calc-form__button" id="form__button" type="button">
+              Розрахувати
+            </button>
+            <!-- <input type="button" value="За місяць -" class="accent-btn" /> -->
           </form>
         </div>
       </section>
